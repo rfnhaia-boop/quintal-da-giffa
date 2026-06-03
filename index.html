@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quintal da Giffa — Cervejaria Artesanal & Cozinha Cervejeira | Jundiaí</title>
+  <meta name="description" content="Quintal da Giffa: cervejas artesanais premiadas e cozinha cervejeira em Jundiaí. Reserve sua mesa pelo WhatsApp. ⭐ 4.7 no Google com 900+ avaliações.">
+  <meta name="keywords" content="Quintal da Giffa, cervejaria artesanal Jundiaí, restaurante Jundiaí, cerveja artesanal, cozinha cervejeira, Giffa Cervejaria">
+  <meta property="og:title" content="Quintal da Giffa — Cervejaria Artesanal & Cozinha Cervejeira">
+  <meta property="og:description" content="Cervejas artesanais premiadas e pratos exclusivos feitos com cerveja. Reserve pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-logo">
+        <img src="images/logo-frundo.jpeg" alt="Quintal da Giffa" class="navbar-logo-img">
+      </a>
+
+      <div class="navbar-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#pratos">Cardápio</a>
+        <a href="#cervejas">Cervejas</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#info">Visite-nos</a>
+      </div>
+
+      <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="navbar-cta desktop-only" id="navbar-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Reservar Mesa
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    <a href="#sobre" onclick="closeMobile()">Sobre</a>
+    <a href="#pratos" onclick="closeMobile()">Cardápio</a>
+    <a href="#cervejas" onclick="closeMobile()">Cervejas</a>
+    <a href="#avaliacoes" onclick="closeMobile()">Avaliações</a>
+    <a href="#info" onclick="closeMobile()">Visite-nos</a>
+    <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="btn-whatsapp" style="margin-top: 20px; font-size: 1rem;">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Reservar Mesa
+    </a>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <video autoplay muted loop playsinline poster="images/hero.png">
+        <source src="images/oloque_pessoas_sentadas_na_cad.mp4" type="video/mp4">
+        <img src="images/hero.png" alt="Interior do Quintal da Giffa">
+      </video>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          4.7 estrelas · Mais de 900 avaliações no Google
+        </div>
+
+        <h1 class="hero-title">
+          Cerveja artesanal<br>
+          & cozinha <span class="accent">cervejeira</span>
+        </h1>
+
+        <p class="hero-description">
+          Desde 2015, produzimos cervejas premiadas e pratos exclusivos feitos com nossas próprias receitas. 
+          Uma experiência única na Rota da Cerveja de Jundiaí.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="btn-whatsapp" id="hero-cta">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Reservar pelo WhatsApp
+          </a>
+          <a href="#pratos" class="btn-outline">
+            Ver Cardápio ↓
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">900+</div>
+            <div class="hero-stat-label">Avaliações no Google</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">10+</div>
+            <div class="hero-stat-label">Cervejas no Tap</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">2015</div>
+            <div class="hero-stat-label">Desde</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image-glow-border"></div>
+          <div class="about-image">
+            <img src="images/ambiente.png" alt="Ambiente do Quintal da Giffa" loading="lazy">
+            <div class="about-badge-floating">
+              <div class="badge-icon">🍺</div>
+              <div class="year">2015</div>
+              <div class="label">Fundação</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <span class="section-label">Nossa História</span>
+          <h2 class="section-title">Do quintal da família para a sua mesa</h2>
+          <p class="about-desc-highlight">
+            Desde 2009, a Família Junqueira traduz a paixão pela cerveja artesanal em uma experiência única em Jundiaí. Harmonizamos nossa própria produção premiada com uma gastronomia autoral e exclusiva.
+          </p>
+
+          <div class="about-features">
+            <!-- Feature 1 -->
+            <div class="about-feature">
+              <div class="about-feature-icon-wrapper">
+                <svg class="about-feature-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <rect x="2" y="8" width="16" height="12" rx="2"></rect>
+                  <line x1="6" y1="8" x2="6" y2="20"></line>
+                  <line x1="10" y1="8" x2="10" y2="20"></line>
+                  <line x1="14" y1="8" x2="14" y2="20"></line>
+                </svg>
+              </div>
+              <div class="about-feature-content">
+                <h4 class="about-feature-title">Cervejaria Própria</h4>
+                <p class="about-feature-desc">10+ estilos direto do taproom.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="about-feature">
+              <div class="about-feature-icon-wrapper">
+                <svg class="about-feature-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <div class="about-feature-content">
+                <h4 class="about-feature-title">Cozinha Cervejeira</h4>
+                <p class="about-feature-desc">Pratos feitos com cerveja artesanal.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="about-feature">
+              <div class="about-feature-icon-wrapper">
+                <svg class="about-feature-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
+                  <path d="M12 2a6 6 0 0 1 6 6v3.5c0 2.5-2 4.5-4.5 4.5h-3C8 16 6 14 6 11.5V8a6 6 0 0 1 6-6Z"></path>
+                </svg>
+              </div>
+              <div class="about-feature-content">
+                <h4 class="about-feature-title">Ouro no Concurso</h4>
+                <p class="about-feature-desc">Bière Brut eleita a melhor do Brasil.</p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="about-feature">
+              <div class="about-feature-icon-wrapper">
+                <svg class="about-feature-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+              </div>
+              <div class="about-feature-content">
+                <h4 class="about-feature-title">Ambiente Completo</h4>
+                <p class="about-feature-desc">Espaço kids completo e pet friendly.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-quote">
+            <p>"Unindo família, amizade e a paixão pela cerveja artesanal."</p>
+            <span class="about-quote-author">— Família Junqueira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DISHES ====== -->
+  <section class="dishes" id="pratos">
+    <div class="container">
+      <div class="dishes-header reveal">
+        <span class="section-label">Cozinha Cervejeira</span>
+        <h2 class="section-title">Os mais elogiados pelos clientes</h2>
+        <p class="section-subtitle">
+          Pratos exclusivos feitos com nossas cervejas artesanais. 
+          Cada receita é uma harmonização perfeita.
+        </p>
+      </div>
+
+      <div class="dishes-grid">
+        <!-- Dish 1 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/rw_prato.png" alt="Prato do Quintal" loading="lazy">
+            <span class="dish-card-tag">★ Favorito</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">Bombom de Alcatra</h3>
+            <p class="dish-card-desc">"O bombom de alcatra estava magnífico, quero muito poder voltar e comer novamente." — avaliação real no Google.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Mais pedido</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/belisquete.png" alt="Belisquetes da Casa" loading="lazy">
+            <span class="dish-card-tag">Petisco</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">Belisquetes da Casa</h3>
+            <p class="dish-card-desc">Petiscos autorais para compartilhar. Perfeitos para harmonizar com as cervejas Giffa no tap.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Para compartilhar</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/craft_beers.jpg" alt="Arroz Caldoso com Joelho" loading="lazy">
+            <span class="dish-card-tag">Assinatura</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">Arroz Caldoso c/ Joelho</h3>
+            <p class="dish-card-desc">Arroz caldoso com joelho de porco desfiado, marinado na Dark Munich premiada. Sabor incomparável.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Assinatura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/smaragd.png" alt="Cerveja Smaragd" loading="lazy">
+            <span class="dish-card-tag">Cerveja Especial</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">Steak Tartare</h3>
+            <p class="dish-card-desc">"O steak tartare é muito bom, com pedaços maiores e bem temperado." — Cristiano, Local Guide.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Autoral</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 5 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/drink.png" alt="Drinks artesanais" loading="lazy">
+            <span class="dish-card-tag">Drinks</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">Drinks Artesanais</h3>
+            <p class="dish-card-desc">Coquetéis criados com as cervejas e ingredientes da casa. Uma experiência diferente a cada visita.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Exclusivo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 6 -->
+        <div class="dish-card reveal">
+          <div class="dish-card-image">
+            <img src="images/quintal.png" alt="Ambiente do Quintal" loading="lazy">
+            <span class="dish-card-tag">Ambiente</span>
+          </div>
+          <div class="dish-card-body">
+            <h3 class="dish-card-name">O Quintal</h3>
+            <p class="dish-card-desc">Espaço aberto com área kids, mesas ao ar livre e ambiente acolhedor. Perfeito para família e amigos.</p>
+            <div class="dish-card-footer">
+              <div class="dish-card-stars">★★★★★</div>
+              <span class="dish-card-reviews">Pet friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA BANNER ====== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-inner reveal">
+        <h2>Quer garantir sua mesa?</h2>
+        <p>Reserve agora pelo WhatsApp e venha experimentar a melhor cozinha cervejeira de Jundiaí.</p>
+        <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="btn-whatsapp" id="mid-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Reservar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== BEERS ====== -->
+  <section class="beers" id="cervejas">
+    <div class="container">
+      <div class="beers-header reveal">
+        <span class="section-label">Cervejas Artesanais</span>
+        <h2 class="section-title">Produzidas com paixão desde 2015</h2>
+        <p class="section-subtitle">
+          Mais de 10 estilos no tap, todas produzidas na nossa cervejaria em Jundiaí. 
+          A Giffa Bière Brut ganhou ouro no Concurso Brasileiro de Cervejas.
+        </p>
+      </div>
+
+      <div class="beers-showcase">
+        <!-- Beer 1 -->
+        <div class="beer-card reveal">
+          <div class="beer-card-image">
+            <img src="images/beer_ipa.png" alt="Giffa IPA" loading="lazy">
+          </div>
+          <div class="beer-card-style">American IPA</div>
+          <h3 class="beer-card-name">Giffa IPA</h3>
+          <p class="beer-card-desc">Lupulagem intensa com notas cítricas e tropicais. Amargor equilibrado e final seco.</p>
+          <span class="beer-card-abv">🍺 6.5% ABV</span>
+        </div>
+
+        <!-- Beer 2 -->
+        <div class="beer-card reveal">
+          <div class="beer-card-image">
+            <img src="images/beer_stout.png" alt="Stout" loading="lazy">
+          </div>
+          <div class="beer-card-style">Stout</div>
+          <h3 class="beer-card-name">Giffa Stout</h3>
+          <p class="beer-card-desc">Notas de café e chocolate amargo. Encorpada e aveludada, perfeita com a sobremesa.</p>
+          <span class="beer-card-abv">🍺 5.8% ABV</span>
+        </div>
+
+        <!-- Beer 3 -->
+        <div class="beer-card reveal">
+          <div class="beer-card-image">
+            <img src="images/beer_pilsen.png" alt="German Pilsen" loading="lazy">
+          </div>
+          <div class="beer-card-style">German Pilsen</div>
+          <h3 class="beer-card-name">Giffa Pilsen</h3>
+          <p class="beer-card-desc">Leve, refrescante e com lúpulo nobre. A escolha perfeita para o dia a dia.</p>
+          <span class="beer-card-abv">🍺 4.8% ABV</span>
+        </div>
+
+        <!-- Beer 4 -->
+        <div class="beer-card reveal">
+          <div class="beer-card-image">
+            <img src="images/beer_weiss.png" alt="Witbier" loading="lazy">
+          </div>
+          <div class="beer-card-style">Witbier</div>
+          <h3 class="beer-card-name">Giffa Wit</h3>
+          <p class="beer-card-desc">Trigo belga com toque de casca de laranja e coentro. Cremosa e refrescante.</p>
+          <span class="beer-card-abv">🍺 4.5% ABV</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== REVIEWS ====== -->
+  <section class="reviews" id="avaliacoes">
+    <div class="container">
+      <div class="reviews-header reveal">
+        <span class="section-label">Avaliações Reais</span>
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <p class="section-subtitle">
+          Mais de 900 avaliações no Google. A opinião de quem já viveu a experiência Quintal da Giffa.
+        </p>
+
+        <div class="reviews-rating-summary">
+          <div class="reviews-big-number">4.7</div>
+          <div class="reviews-stars-group">
+            <div class="stars">★★★★★</div>
+            <div class="count">909 avaliações no Google</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 - REAL -->
+        <div class="review-card reveal">
+          <div class="review-card-header">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #4a7c4e, #2d5a31);">Z</div>
+            <div class="review-info">
+              <div class="review-name">Zulmira Diz</div>
+              <div class="review-date">Local Guide · 4 meses atrás</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Comidas deliciosas! Cada um da mesa pediu pratos diferentes para todos experimentarem. Tudo muito bom. Eles têm um balcão com cervejas artesanais Giffa, excelentes também. Equipe de atendimento simpática e educada. Espaço bonito e aconchegante."</p>
+          <div class="review-google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação do Google
+          </div>
+        </div>
+
+        <!-- Review 2 - REAL -->
+        <div class="review-card reveal">
+          <div class="review-card-header">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #c8a55a, #8B6914);">C</div>
+            <div class="review-info">
+              <div class="review-name">Cristiano</div>
+              <div class="review-date">Local Guide · 8 meses atrás</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Ambiente, comida e preço são bons, mas o atendimento surpreendeu! O steak tartare é muito bom, a cerveja de trigo é muito boa, o arroz caldoso com joelho de porco estava bem servido. Recomendo."</p>
+          <div class="review-google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação do Google
+          </div>
+        </div>
+
+        <!-- Review 3 - REAL -->
+        <div class="review-card reveal">
+          <div class="review-card-header">
+            <div class="review-avatar" style="background: linear-gradient(135deg, #2d6a4f, #1b4332);">G</div>
+            <div class="review-info">
+              <div class="review-name">Giovanni Marchezini</div>
+              <div class="review-date">7 meses atrás</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Experiência incrível, atendimento sensacional. Melhor prato com toda certeza, o bombom de alcatra estava magnífico, quero muito poder voltar e comer novamente isso."</p>
+          <div class="review-google">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação do Google
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- ====== INFO SECTION ====== -->
+  <section class="info" id="info">
+    <div class="container">
+      <div class="info-grid">
+        <!-- Hours -->
+        <div class="info-card reveal">
+          <h3 class="info-card-title">
+            <span class="icon-wrapper">
+              <svg class="info-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            Horário de Funcionamento
+          </h3>
+          <div class="hours-list" id="hours-list">
+            <div class="hours-item" data-day="1">
+              <span class="hours-day">Segunda-feira</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">Fechado</span>
+            </div>
+            <div class="hours-item" data-day="2">
+              <span class="hours-day">Terça-feira</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">18h – 23h</span>
+            </div>
+            <div class="hours-item" data-day="3">
+              <span class="hours-day">Quarta-feira</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">18h – 23h</span>
+            </div>
+            <div class="hours-item" data-day="4">
+              <span class="hours-day">Quinta-feira</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">18h – 23h</span>
+            </div>
+            <div class="hours-item" data-day="5">
+              <span class="hours-day">Sexta-feira</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">16h – 23h</span>
+            </div>
+            <div class="hours-item" data-day="6">
+              <span class="hours-day">Sábado</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">12h – 23h30</span>
+            </div>
+            <div class="hours-item" data-day="0">
+              <span class="hours-day">Domingo</span>
+              <span class="hours-dot"></span>
+              <span class="hours-time">12h – 16h</span>
+            </div>
+          </div>
+          <div class="hours-footnote">
+            * A cozinha encerra suas atividades 30 minutos antes do fechamento da casa (1 hora aos domingos).
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="info-card reveal">
+          <h3 class="info-card-title">
+            <span class="icon-wrapper">
+              <svg class="info-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            Como Chegar
+          </h3>
+          <div class="location-address">
+            <div class="address-pin-wrapper">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 20 10.2c0 7.3-8 11.8-8 11.8z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="location-address-text">
+              <strong>Quintal da Giffa</strong>
+              <span class="street">Rua Trenton, 106 – Parque do Colégio</span>
+              <span class="city">Jundiaí – SP, CEP 13209-170</span>
+              <span class="whatsapp-text">Reservas: <a href="https://wa.me/5511944874025" class="address-wa-link">(11) 94487-4025</a></span>
+            </div>
+          </div>
+
+          <div class="location-actions">
+            <button class="btn-location-action btn-copy" id="btn-copy-address" data-address="Rua Trenton, 106 - Parque do Colégio, Jundiaí - SP, 13209-170">
+              <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copiar Endereço</span>
+            </button>
+            <a href="https://maps.app.goo.gl/tBqX6yJspW76vC439" target="_blank" rel="noopener" class="btn-location-action btn-maps">
+              <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+              </svg>
+              <span>Google Maps</span>
+            </a>
+            <a href="https://waze.com/ul?ll=-23.1831925,-46.8989503&navigate=yes" target="_blank" rel="noopener" class="btn-location-action btn-waze">
+              <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                <circle cx="7" cy="17" r="2"></circle>
+                <circle cx="17" cy="17" r="2"></circle>
+              </svg>
+              <span>Waze</span>
+            </a>
+          </div>
+
+          <div class="map-container-wrapper">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.8!2d-46.8989503!3d-23.1831925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf277c59422adf%3A0xaccc3d22cd3f3e1c!2sQuintal%20da%20Giffa!5e0!3m2!1spt-BR!2sbr!4v1717360000000!5m2!1spt-BR!2sbr"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização Quintal da Giffa no Google Maps">
+              </iframe>
+            </div>
+            <div class="map-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FINAL CTA ====== -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-inner reveal" style="background: linear-gradient(135deg, rgba(200,165,90,0.06) 0%, rgba(46,204,64,0.04) 100%); border-color: rgba(200,165,90,0.15);">
+        <h2>Pronto para uma experiência única?</h2>
+        <p>A melhor cozinha cervejeira de Jundiaí espera por você. Reserve agora e venha conhecer o Quintal da Giffa.</p>
+        <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="btn-whatsapp" id="final-cta">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Reservar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo-frundo.jpeg" alt="Quintal da Giffa" style="height:64px; border-radius:10px; object-fit:cover;">
+          <p>Cervejaria artesanal e cozinha cervejeira em Jundiaí — SP. Produzindo cervejas premiadas e pratos autorais desde 2015. Parte da Rota da Cerveja Artesanal de Jundiaí.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#pratos">Cardápio</a>
+          <a href="#cervejas">Cervejas</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="#info">Localização</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511944874025">WhatsApp: (11) 94487-4025</a>
+          <a href="tel:+551127099819">Tel: (11) 2709-9819</a>
+          <a href="https://www.instagram.com/quintaldagiffa/" target="_blank" rel="noopener">@quintaldagiffa</a>
+          <a href="https://www.instagram.com/giffacervejaria/" target="_blank" rel="noopener">@giffacervejaria</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Quintal da Giffa — Giffa Cervejaria. Todos os direitos reservados.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/quintaldagiffa/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+          <a href="https://wa.me/5511944874025" class="footer-social-link" aria-label="WhatsApp">💬</a>
+          <a href="https://www.google.com/maps/place/Quintal+da+Giffa" class="footer-social-link" target="_blank" rel="noopener" aria-label="Google Maps">📍</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== FLOATING WHATSAPP ====== -->
+  <div class="whatsapp-float" id="whatsapp-float">
+    <div class="whatsapp-float-tooltip">Reserve sua mesa agora!</div>
+    <a href="https://wa.me/5511944874025?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20reserva%20no%20Quintal%20da%20Giffa" class="whatsapp-float-btn" aria-label="Reservar pelo WhatsApp" id="float-cta">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.313 0-4.445-.77-6.164-2.07l-.43-.33-3.27 1.097 1.097-3.27-.33-.43A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                              
